@@ -46,7 +46,7 @@ main {
     color: lightgray;
 }
 /* AGGIUNTA MD */
- @media screen and (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
     .column-md-5 {
             flex-basis: calc(100% / 5);
     }

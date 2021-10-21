@@ -1,0 +1,53 @@
+/* VARIABLES */
+:root {
+    --primaryColor: #1e2d3b;
+    --secondaryColor: #2e3a46;
+}
+/* GENERALI */
+body {
+    background-color: var(--primaryColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* HEADER */
+header {
+    background-color: var(--secondaryColor);
+    padding: .625rem;
+    position: fixed;
+    top: 0rem;
+}
+header img {
+    width: 3.875rem;
+}
+/* MAIN */
+main {
+    padding: 5.96875rem 0rem 1.5625rem 0rem;
+}
+.column-12 {
+    flex-basis: 100%;
+    padding: 0rem .625rem .625rem .625rem;
+}
+.card {
+    text-align: center;
+    width: 100%;
+    background-color: var(--secondaryColor);
+    padding: .625rem;
+    height: 100%;
+}
+.card .poster {
+    width: 100%;
+}
+.card .title {
+    color: white;
+    font-weight: bold;
+    margin: .625rem 0rem;
+}
+.card .author,
+.card .year {
+    color: lightgray;
+}
+/* AGGIUNTA MD */
+ @media screen and (min-width: 48rem) {
+    .column-md-5 {
+            flex-basis: calc(100% / 5);
+    }
+}

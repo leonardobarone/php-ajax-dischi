@@ -11,7 +11,7 @@ const app = new Vue({
         })
         .catch(function (error) {
             // handle error
-            console.log(error);
+            alert("errori");
         })
     }
 }) 

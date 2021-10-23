@@ -30,7 +30,7 @@
                     <div class="row">
                         <div v-for="(disco, index) in dischi" :key="index" class="column-12 column-md-5">
                             <div class="card">
-                                <img class="poster" :src="disco.poster">
+                                <img class="poster" :src="disco.poster" :alt="disco.title">
                                 <div class="title">{{disco.title.toUpperCase()}}</div>
                                 <div class="author">{{disco.author}}</div>
                                 <div class="year">{{disco.year}}</div>

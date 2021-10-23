@@ -45,6 +45,9 @@ main {
 .card .year {
     color: lightgray;
 }
+.text-right {
+    text-align: right;
+}
 /* AGGIUNTA MD */
 @media screen and (min-width: 48rem) {
     .column-md-5 {

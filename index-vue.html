@@ -18,9 +18,18 @@
         <div id="root">
             <!-- HEADER -->
             <header class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-2">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-2">
                         <img src="./img/spotify-logo.png" alt="logo header">
+                    </div>
+                    <div class="col-6 col-md-10 text-right">
+                        <!-- DA FARE CON V-FOR -->
+                        <select name="genre" v-model="selectGenre" @change="filtraggio()">
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="metal">Metal</option>
+                        </select>
                     </div>
                 </div>
             </header>

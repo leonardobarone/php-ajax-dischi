@@ -1,7 +1,8 @@
 const app = new Vue({
     el: '#root',
     data: {
-        dischi: []
+        dischi: [],
+        selectGenre: "",
     },
     created() {
         axios.get('http://localhost/php-ajax-dischi/api/index.php')
@@ -13,5 +14,23 @@ const app = new Vue({
             // handle error
             alert("errori");
         })
+    },
+    methods: {
+        filtraggio() {
+                axios.get('http://localhost/php-ajax-dischi/api/index.php', {
+                    params: {
+                        "genre": this.selectGenre
+                    }
+                })
+            .then((response) => {
+                // handle success
+                this.dischi = response.data;
+            })
+            .catch(function (error) {
+                // handle error
+                alert("errori");
+            })
+        }
     }
+
 }) 

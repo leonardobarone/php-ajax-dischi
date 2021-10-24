@@ -24,11 +24,9 @@
                     </div>
                     <div class="col-6 col-md-10 text-right">
                         <!-- DA FARE CON V-FOR -->
-                        <select name="genre" v-model="selectGenre" @change="filtraggio()">
-                            <option value="rock">Rock</option>
-                            <option value="pop">Pop</option>
-                            <option value="jazz">Jazz</option>
-                            <option value="metal">Metal</option>
+                        <select v-model="selectGenre" @change="filtraggio()">
+                            <!-- <option value="all">all</option> -->
+                            <option v-for="(genre, index) in genres" :value="genre">{{genre}}</option>
                         </select>
                     </div>
                 </div>

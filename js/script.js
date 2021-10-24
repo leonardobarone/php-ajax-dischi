@@ -3,12 +3,21 @@ const app = new Vue({
     data: {
         dischi: [],
         selectGenre: "",
+        genres: [],
     },
     created() {
         axios.get('http://localhost/php-ajax-dischi/api/index.php')
         .then((response) => {
             // handle success
             this.dischi = response.data;
+            // if(!this.dischi.includes(response.genre)) {
+
+            // }
+            this.dischi.forEach((el) => {
+                if(!this.genres.includes(el.genre.toLowerCase())) {
+                    this.genres.push(el.genre.toLowerCase())
+                }
+            });
         })
         .catch(function (error) {
             // handle error

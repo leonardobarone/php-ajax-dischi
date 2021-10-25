@@ -25,7 +25,7 @@
                     <div class="col-6 col-md-10 text-right">
                         <!-- DA FARE CON V-FOR -->
                         <select v-model="selectGenre" @change="filtraggio()">
-                            <!-- <option value="all">all</option> -->
+                            <option value="all">all</option>
                             <option v-for="(genre, index) in genres" :value="genre">{{genre}}</option>
                         </select>
                     </div>

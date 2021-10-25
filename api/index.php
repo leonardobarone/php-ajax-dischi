@@ -13,12 +13,13 @@ if ( !empty(($_GET["genre"])) ) {
     foreach($database as $disco) {
         if($genre == strtolower($disco["genre"])) {
             $databaseFiltered[] = $disco;
-        } 
+        } else if ($genre == 'all') {
+            $databaseFiltered[]=$disco;
+        }
     }
     echo json_encode($databaseFiltered);
 
 } else {
-
     echo json_encode($database);
 
 }
